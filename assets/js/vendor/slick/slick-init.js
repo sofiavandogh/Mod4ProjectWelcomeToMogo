@@ -1,16 +1,26 @@
 //Hero Slick Animation with Autoplay and Fade
 
-$('.hero-container').slick({
+$('.hero-slider').slick({
     slidesToShow: 1,
     fade: true,
     autoplay: true,
     autoplaySpeed: 3000,
-    arrows: false
+    arrows: false,
+    dots: false
 });
+
+/* $('.hero-footer-slider').slick({
+    slidesToShow: 1,
+    asNavFor: '.hero-slider',
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+}); */
 
 // Slider Inspirations Slick Animation 
 
-$('.main-slider-container').slick({
+/* $('.main-slider-container').slick({
     dots: true,
     infinite: false,
     speed: 300,
@@ -42,4 +52,4 @@ $('.main-slider-container').slick({
         }
     ]
 });
-                    
+                */     

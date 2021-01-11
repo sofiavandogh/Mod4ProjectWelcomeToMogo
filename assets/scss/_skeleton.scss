@@ -1,12 +1,14 @@
 body {
-    background-color: $primary-color;
+    background-color: blue;
+    max-width: 1366px;
+    width: 100%;
+    position: relative;
 }
 
-//background white rectangle where the site content rests
+//area where the site content rests
 .page-container {
-    max-width: 1280px;
+    max-width: 1200px;
     width: 100%;
-    background-color: white;
-    margin: 30px auto 30px auto;
-    padding: 30px;
+    margin: 0 auto;
+    position: relative;
 }
