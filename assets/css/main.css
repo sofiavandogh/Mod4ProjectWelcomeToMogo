@@ -71,7 +71,7 @@ html, body {
 }
 
 body {
-  background-color: blue;
+  background-color: white;
   max-width: 1366px;
   width: 100%;
   position: relative;
@@ -235,5 +235,183 @@ body {
   height: 100%;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(251, 227, 137, 0.8)), to(rgba(243, 138, 129, 0.6)));
   background: linear-gradient(0deg, rgba(251, 227, 137, 0.8) 0%, rgba(243, 138, 129, 0.6) 100%);
+}
+
+.page-title {
+  text-align: center;
+  margin: 0 auto;
+  padding: 80px 0 50px 0;
+}
+
+.page-title::after {
+  content: '';
+  border: 1px solid #f38181;
+  padding-bottom: 60px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: absolute;
+  top: 160px;
+  left: 600px;
+}
+
+.page-title h4 {
+  font-family: "Kaushan Script", cursive;
+  color: #333333;
+  font-size: 24px;
+  padding-bottom: 25px;
+}
+
+.page-title h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 25px;
+}
+
+.about-para {
+  font-size: 15px;
+  line-height: 24px;
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.about-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-bottom: 80px;
+}
+
+.about-images .image-container {
+  position: relative;
+}
+
+.about-images .image-container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(251, 227, 137, 0.9)), to(rgba(243, 138, 129, 0.8)));
+  background: linear-gradient(0deg, rgba(251, 227, 137, 0.9) 0%, rgba(243, 138, 129, 0.8) 100%);
+}
+
+.about-images .image-container .overlay:hover {
+  opacity: 1;
+  -webkit-box-shadow: 7px 7px #95e1d3;
+          box-shadow: 7px 7px #95e1d3;
+}
+
+.about-images .image-container .overlay .overlay-content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.about-images .image-container .overlay .overlay-content span {
+  font-size: 24px;
+  color: white;
+}
+
+.about-images .image-container .overlay .overlay-content p {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  padding-top: 5px;
+}
+
+.facts {
+  width: 100%;
+  background-color: #95e1d3;
+  height: 265px;
+}
+
+.facts ul {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0;
+}
+
+.facts ul li {
+  display: inline-block;
+  width: 20%;
+}
+
+.facts ul li .numbers {
+  font-size: 72px;
+  font-weight: 700;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  padding: 100px 0 30px 0;
+}
+
+.facts ul li .text {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  padding: 0;
+}
+
+.services-uprow, .services-downrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 50px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.services-uprow .services-item, .services-downrow .services-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+}
+
+.services-uprow .services-item .services-image, .services-downrow .services-item .services-image {
+  color: #95e1d3;
+  font-size: 32px;
+}
+
+.services-uprow .services-item .services-content, .services-downrow .services-item .services-content {
+  text-align: left;
+  padding-left: 15px;
+}
+
+.services-uprow .services-item .services-content h5, .services-downrow .services-item .services-content h5 {
+  padding-bottom: 10px;
+  color: #333333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+
+.services-uprow .services-item .services-content p, .services-downrow .services-item .services-content p {
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.services-downrow {
+  border-bottom: none;
 }
 /*# sourceMappingURL=main.css.map */

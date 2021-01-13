@@ -1,0 +1,28 @@
+.facts {
+    width: 100%;
+    background-color: $third-color;
+    height: 265px;
+    ul {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 0;
+        li {
+            display: inline-block;
+            width: 20%;
+            .numbers {
+                font-size: 72px;
+                font-weight: 700;
+                color: $primary-color;
+                font-family: $primary-font;
+                padding: 100px 0 30px 0;
+            }
+            .text {
+                color: $primary-color;
+                font-family: $primary-font;
+                font-size: 14px;
+                padding: 0;
+            }
+        }
+    }
+}

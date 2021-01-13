@@ -1,0 +1,36 @@
+.services-uprow {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 50px 0;
+    justify-content: space-between;
+    .services-item {
+        display: flex;
+        width: 30%;
+        .services-image {
+            color: $third-color;
+            font-size: 32px;
+        }
+        .services-content {
+            text-align: left;
+            padding-left: 15px;
+            h5 {
+                padding-bottom: 10px;
+                color: $secondary-color;
+                font-family: $primary-font;
+                font-size: 15px;
+            }
+            p {
+                color: $fifth-color;
+                font-family: $third-font;
+                font-size: 15px;
+                line-height: 24px;
+            }
+           
+        }
+    }
+}
+.services-downrow {
+    @extend .services-uprow;
+    border-bottom: none;
+}

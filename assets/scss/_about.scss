@@ -1,0 +1,55 @@
+.about-para {
+    font-size: 15px;
+    line-height: 24px;
+    color: $fifth-color;
+    font-family: $third-font;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.about-images {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 80px;
+    .image-container {
+    position: relative;
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            background: linear-gradient(0deg, rgba(251,227,137, 0.9) 0%, rgba(243,138,129, 0.8) 100%);
+            &:hover {
+                opacity: 1;
+                box-shadow: 7px 7px $third-color;
+            }
+            .overlay-content {
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                text-align: center;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                span {
+                    font-size: 24px;
+                    color: $primary-color;
+                }
+                p {
+                    color: $primary-color;
+                    font-weight: 700;
+                    font-size: 18px;
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+
+

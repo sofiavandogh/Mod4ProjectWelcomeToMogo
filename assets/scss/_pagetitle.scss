@@ -1,0 +1,27 @@
+.page-title {
+    text-align: center;
+    margin: 0 auto;
+    padding: 80px 0 50px 0;
+    &::after {
+        content: '';
+        border: 1px solid $fourth-color;
+        padding-bottom: 60px;
+        transform: rotate(90deg);
+        position: absolute;
+        top: 160px;
+        left: 600px;
+    }
+    h4 {
+        font-family: $secondary-font;
+        color: $secondary-color;
+        font-size: 24px;
+        padding-bottom: 25px;
+    }
+    h3 {
+        font-family: $primary-font;
+        color: $secondary-color;
+        font-size: 30px;
+        font-weight: 700;
+        padding-bottom: 25px;
+    }
+}
