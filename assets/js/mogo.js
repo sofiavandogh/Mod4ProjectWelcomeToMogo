@@ -1,3 +1,12 @@
+
+$('.accordion-service-title').click(function(){
+    $(this).next().toggle();
+})
+
+
+
+
+
 //Hero footer animation
 //get elements
 /* let numberOne = document.querySelector('#hero-footer-one');

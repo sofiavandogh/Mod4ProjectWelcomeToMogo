@@ -1,0 +1,53 @@
+.whatwedo {
+    padding: 40px 0 50px 0;
+    display: flex;
+    .whatwedo-image {
+        margin-right: 25px;
+    }
+    .whatwedo-accordion {
+        width: 48%;
+        .accordion-service-item {
+            margin-bottom: 15px;
+            .accordion-service-title {
+                border: 1px solid #e5e5e5;
+                padding-left: 15px;
+                line-height: 53px;
+                position: relative;
+                span {
+                    color: $third-color;
+                    font-size: 30px;
+                    padding-right: 15px;
+                    vertical-align: middle;
+                }
+                .service-name{
+                    color: $secondary-color;
+                    font-family: $primary-font;
+                    font-size: 15px; 
+                }
+                .icon-keyboard_arrow_down {
+                    position: absolute;
+                    right: 0%;
+                    top: 50%;
+                    transform:translateY(-50%);
+                }
+                .icon-keyboard_arrow_up {
+                    display: none;
+                }
+            }
+            .accordion-service-description {
+                display: none;
+                font-family: $third-font;
+                color: $fifth-color;
+                font-size: 15px;
+                font-style: italic;
+                height: 181px;
+                overflow: auto;
+                line-height: 24px;
+                border-left: 1px solid #e5e5e5;
+                border-right: 1px solid #e5e5e5;
+                border-bottom: 1px solid #e5e5e5;
+                padding: 15px;
+            } 
+        }
+    }
+}

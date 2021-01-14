@@ -146,7 +146,7 @@ body {
   right: 0;
 }
 
-.hero .hero-content h2 {
+.hero .hero-content p {
   color: white;
   font-family: "Kaushan Script", cursive;
   font-size: 72px;
@@ -156,8 +156,22 @@ body {
 .hero .hero-content h1 {
   font-family: "Montserrat", sans-serif;
   color: white;
-  font-size: 150px;
+  font-size: 130px;
   font-weight: 700;
+}
+
+.hero .hero-content h1:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 70%;
+  height: 3px;
+  width: 60px;
+  background: white;
+  left: 50%;
+  z-index: 500;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .hero .hero-content button {
@@ -170,30 +184,20 @@ body {
   text-transform: uppercase;
   margin-top: 80px;
   padding: 10px 30px;
+  cursor: pointer;
 }
 
 .hero .hero-content button a {
   color: white;
 }
 
-.hero .hero-content button:before {
-  content: '';
-  border: 1px solid white;
-  padding-top: 60px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  position: absolute;
-  top: 400px;
-  left: 470px;
-}
-
 .hero .hero-content .hero-footer-slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 50px;
 }
 
@@ -201,6 +205,7 @@ body {
   font-family: "Montserrat", sans-serif;
   color: white;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .hero .hero-content .hero-footer-slider div a span {
@@ -211,19 +216,19 @@ body {
   position: relative;
   width: 20%;
   text-align: left;
-  border-top: 2px solid white;
+  border-top: 3px solid white;
   padding-top: 15px;
 }
 
 .hero .hero-content .hero-footer-slider .active::before {
   content: '';
-  border: 2px solid #f38181;
-  padding-top: 50px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
   position: absolute;
-  bottom: 5px;
-  left: 25px;
+  display: block;
+  height: 3px;
+  width: 60px;
+  top: -10%;
+  background: #f38181;
+  z-index: 500;
 }
 
 .hero .hero-slider div:after {
@@ -237,31 +242,32 @@ body {
   background: linear-gradient(0deg, rgba(251, 227, 137, 0.8) 0%, rgba(243, 138, 129, 0.6) 100%);
 }
 
-.page-title {
+.section-title {
   text-align: center;
   margin: 0 auto;
   padding: 80px 0 50px 0;
 }
 
-.page-title::after {
+.section-title::after {
   content: '';
-  border: 1px solid #f38181;
-  padding-bottom: 60px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
   position: absolute;
-  top: 160px;
-  left: 600px;
+  display: block;
+  height: 3px;
+  width: 60px;
+  background: #f38181;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
-.page-title h4 {
+.section-title h2 {
   font-family: "Kaushan Script", cursive;
   color: #333333;
   font-size: 24px;
   padding-bottom: 25px;
 }
 
-.page-title h3 {
+.section-title h3 {
   font-family: "Montserrat", sans-serif;
   color: #333333;
   font-size: 30px;
@@ -269,7 +275,7 @@ body {
   padding-bottom: 25px;
 }
 
-.about-para {
+.section-para {
   font-size: 15px;
   line-height: 24px;
   color: #999999;
@@ -294,7 +300,7 @@ body {
   position: relative;
 }
 
-.about-images .image-container .overlay {
+.about-images .image-container .image-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -307,15 +313,15 @@ body {
   background: linear-gradient(0deg, rgba(251, 227, 137, 0.9) 0%, rgba(243, 138, 129, 0.8) 100%);
 }
 
-.about-images .image-container .overlay:hover {
+.about-images .image-container .image-overlay:hover {
   opacity: 1;
   -webkit-box-shadow: 7px 7px #95e1d3;
           box-shadow: 7px 7px #95e1d3;
 }
 
-.about-images .image-container .overlay .overlay-content {
+.about-images .image-container .image-overlay .image-overlay-content {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   text-align: center;
   -webkit-transform: translate(-50%, -50%);
@@ -323,13 +329,14 @@ body {
   width: 100%;
 }
 
-.about-images .image-container .overlay .overlay-content span {
+.about-images .image-container .image-overlay .image-overlay-content span {
   font-size: 24px;
   color: white;
 }
 
-.about-images .image-container .overlay .overlay-content p {
+.about-images .image-container .image-overlay .image-overlay-content p {
   color: white;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 18px;
   padding-top: 5px;
@@ -368,7 +375,7 @@ body {
   padding: 0;
 }
 
-.services-uprow, .services-downrow {
+.services-first-row, .services-second-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -380,38 +387,138 @@ body {
           justify-content: space-between;
 }
 
-.services-uprow .services-item, .services-downrow .services-item {
+.services-first-row .services-item, .services-second-row .services-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 30%;
 }
 
-.services-uprow .services-item .services-image, .services-downrow .services-item .services-image {
+.services-first-row .services-item .services-image, .services-second-row .services-item .services-image {
   color: #95e1d3;
   font-size: 32px;
 }
 
-.services-uprow .services-item .services-content, .services-downrow .services-item .services-content {
+.services-first-row .services-item .services-content, .services-second-row .services-item .services-content {
   text-align: left;
   padding-left: 15px;
 }
 
-.services-uprow .services-item .services-content h5, .services-downrow .services-item .services-content h5 {
+.services-first-row .services-item .services-content h4, .services-second-row .services-item .services-content h4 {
   padding-bottom: 10px;
   color: #333333;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
 }
 
-.services-uprow .services-item .services-content p, .services-downrow .services-item .services-content p {
+.services-first-row .services-item .services-content p, .services-second-row .services-item .services-content p {
   color: #999999;
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   line-height: 24px;
 }
 
-.services-downrow {
+.services-second-row {
   border-bottom: none;
+}
+
+.feature {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.feature .section-title {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.feature .feature-bg-image1 img {
+  opacity: 0.15;
+}
+
+.feature .feature-images {
+  position: relative;
+}
+
+.feature .feature-images .feature-image2 {
+  position: absolute;
+  top: -507px;
+  left: 410px;
+  z-index: 1;
+}
+
+.feature .feature-images .feature-image3 {
+  position: absolute;
+  z-index: 2;
+  top: -350px;
+  left: 740px;
+}
+
+.whatwedo {
+  padding: 40px 0 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.whatwedo .whatwedo-image {
+  margin-right: 25px;
+}
+
+.whatwedo .whatwedo-accordion {
+  width: 48%;
+}
+
+.whatwedo .whatwedo-accordion .accordion-service-item {
+  margin-bottom: 15px;
+}
+
+.whatwedo .whatwedo-accordion .accordion-service-item .accordion-service-title {
+  border: 1px solid #e5e5e5;
+  padding-left: 15px;
+  line-height: 53px;
+  position: relative;
+}
+
+.whatwedo .whatwedo-accordion .accordion-service-item .accordion-service-title span {
+  color: #95e1d3;
+  font-size: 30px;
+  padding-right: 15px;
+  vertical-align: middle;
+}
+
+.whatwedo .whatwedo-accordion .accordion-service-item .accordion-service-title .service-name {
+  color: #333333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+
+.whatwedo .whatwedo-accordion .accordion-service-item .accordion-service-title .icon-keyboard_arrow_down {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.whatwedo .whatwedo-accordion .accordion-service-item .accordion-service-title .icon-keyboard_arrow_up {
+  display: none;
+}
+
+.whatwedo .whatwedo-accordion .accordion-service-item .accordion-service-description {
+  display: none;
+  font-family: "Roboto", sans-serif;
+  color: #999999;
+  font-size: 15px;
+  font-style: italic;
+  height: 181px;
+  overflow: auto;
+  line-height: 24px;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 15px;
 }
 /*# sourceMappingURL=main.css.map */

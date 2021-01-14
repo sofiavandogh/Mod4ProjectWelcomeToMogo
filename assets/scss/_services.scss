@@ -1,4 +1,4 @@
-.services-uprow {
+.services-first-row {
     display: flex;
     width: 100%;
     border-bottom: 1px solid #e5e5e5;
@@ -14,7 +14,7 @@
         .services-content {
             text-align: left;
             padding-left: 15px;
-            h5 {
+            h4 {
                 padding-bottom: 10px;
                 color: $secondary-color;
                 font-family: $primary-font;
@@ -30,7 +30,7 @@
         }
     }
 }
-.services-downrow {
-    @extend .services-uprow;
+.services-second-row {
+    @extend .services-first-row;
     border-bottom: none;
 }

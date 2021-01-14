@@ -1,0 +1,28 @@
+.feature {
+    width: 100%;
+    padding-bottom: 50px;
+    .section-title {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+    .feature-bg-image1 img {
+        opacity: 0.15;
+    }
+    .feature-images {
+        position: relative;
+       .feature-image2 {
+            position: absolute;
+            top: -507px;
+            left: 410px;
+            z-index: 1;
+        }
+        .feature-image3 {
+            position: absolute;
+            z-index: 2;
+            top: -350px;
+            left: 740px;
+        }
+    }
+}
